@@ -9,32 +9,29 @@ import {
   CardActions,
   Button,
 } from '@mui/material';
-import { GitHub, Launch } from '@mui/icons-material';
+import { GitHub } from '@mui/icons-material';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce platform built with React and Node.js',
-    image: 'https://via.placeholder.com/400x200',
-    github: '#',
-    demo: '#',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+    title: 'Oyun Satış Uygulaması',
+    description: 'Mini bir oyun satın alma uygulaması  ',
+    github: 'https://github.com/EminLatifBozkurt/oyun-sat-uygulamas-',
+    image: '/images/oyun.png',
+    technologies: ['PyQt5', 'SQLite', 'CSS','Python'],
   },
   {
-    title: 'Task Management App',
-    description: 'A task management application with real-time updates',
-    image: 'https://via.placeholder.com/400x200',
-    github: '#',
-    demo: '#',
-    technologies: ['React', 'Firebase', 'Material-UI'],
+    title: 'Basit Word',
+    description: 'Word uygulamasının basitleştirilmiş hali ',
+    github: 'https://github.com/EminLatifBozkurt/Basit-word-uygulamas-',
+    image: '/images/mini word.png',
+    technologies: ['PyQt5','Python'],
   },
   {
-    title: 'Weather Dashboard',
-    description: 'A weather dashboard using OpenWeather API',
-    image: 'https://via.placeholder.com/400x200',
-    github: '#',
-    demo: '#',
-    technologies: ['JavaScript', 'REST API', 'Bootstrap'],
+    title: 'Soru Bankası',
+    description: 'Soru bankası hazırlamak için basit bir proje',
+    github: 'https://github.com/EminLatifBozkurt/Soru-Bankas-',
+    image: '/images/sorubankası.png',
+    technologies: [ 'PyQt5','Python','QTDesigner'],
   },
 ];
 
@@ -59,7 +56,7 @@ function Portfolio() {
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
               sx={{
-                height: '100%',
+                height: '600px',
                 display: 'flex',
                 flexDirection: 'column',
                 transition: 'all 0.3s ease',
@@ -75,7 +72,7 @@ function Portfolio() {
             >
               <CardMedia
                 component="img"
-                height="200"
+                height="400"
                 image={project.image}
                 alt={project.title}
                 sx={{
@@ -84,6 +81,7 @@ function Portfolio() {
                   '&:hover': {
                     filter: 'brightness(1)',
                   },
+                  objectFit: 'cover'
                 }}
               />
               <CardContent sx={{ flexGrow: 1, position: 'relative' }}>
@@ -113,14 +111,16 @@ function Portfolio() {
                   Technologies: {project.technologies.join(', ')}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardActions sx={{ justifyContent: 'center', pb: 2 }}>
                 <Button
-                  size="small"
+                  size="large"
                   startIcon={<GitHub />}
                   href={project.github}
                   target="_blank"
                   sx={{
                     color: '#fff',
+                    width: '200px',
+                    padding: '10px 0',
                     background: 'linear-gradient(45deg, #9c27b0 30%, #2196f3 90%)',
                     boxShadow: '0 0 10px rgba(156, 39, 176, 0.3)',
                     '&:hover': {
@@ -130,24 +130,6 @@ function Portfolio() {
                   }}
                 >
                   Code
-                </Button>
-                <Button
-                  size="small"
-                  startIcon={<Launch />}
-                  href={project.demo}
-                  target="_blank"
-                  sx={{
-                    ml: 1,
-                    color: '#fff',
-                    background: 'linear-gradient(45deg, #2196f3 30%, #9c27b0 90%)',
-                    boxShadow: '0 0 10px rgba(33, 150, 243, 0.3)',
-                    '&:hover': {
-                      background: 'linear-gradient(45deg, #1976d2 30%, #7b1fa2 90%)',
-                      boxShadow: '0 0 15px rgba(33, 150, 243, 0.5)',
-                    },
-                  }}
-                >
-                  Live Demo
                 </Button>
               </CardActions>
             </Card>

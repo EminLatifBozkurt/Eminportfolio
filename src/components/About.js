@@ -16,8 +16,8 @@ function About() {
               Who I Am
             </Typography>
             <Typography>
-              A passionate developer with a keen eye for detail and a drive for creating
-              elegant solutions to complex problems.
+              Merhaba ben emin , Bilgisayar Mühendisiyim ve yazılım geliştirme ile ilgileniyorum, oyun 
+              geliştirme , siber güvenlik , yapay zeka ve kripto paralarla ilgileniyorum.
             </Typography>
           </Paper>
         </Grid>
@@ -28,8 +28,7 @@ function About() {
               Education
             </Typography>
             <Typography>
-              Bachelor's degree in Computer Science with a focus on web development
-              and software engineering.
+              Balıkesir Üniversitesi Bilgisayar Mühendisliği 2.sınıf öğrencisiyim.
             </Typography>
           </Paper>
         </Grid>
@@ -40,8 +39,8 @@ function About() {
               Experience
             </Typography>
             <Typography>
-              Over 3 years of experience in full-stack development, working with
-              modern technologies and frameworks.
+              Balıkesir Üniversitesi EBST  (Elektrik ve Bilgisayar Sistemleri Topluluğu) yönetim kurulunda görev almaktayım,
+              İş tecrübem olmasada kendimi geliştirmeye çalışıyorum.
             </Typography>
           </Paper>
         </Grid>

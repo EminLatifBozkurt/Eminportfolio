@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper, Box, Link } from '@mui/material';
-import { FaReact, FaJs, FaHtml5, FaNodeJs, FaPython, FaDatabase, FaGitAlt } from 'react-icons/fa';
+import { FaReact, FaJs, FaHtml5, FaNodeJs, FaPython, FaDatabase } from 'react-icons/fa';
 import { SiCsharp, SiAutodesk, SiDotnet } from 'react-icons/si';
 
 const skills = [
@@ -10,7 +10,6 @@ const skills = [
   { name: 'Node.js', url: 'https://nodejs.org', icon: FaNodeJs },
   { name: 'Python', url: 'https://www.python.org', icon: FaPython },
   { name: 'SQL', url: 'https://www.w3schools.com/sql', icon: FaDatabase },
-  { name: 'Git', url: 'https://git-scm.com', icon: FaGitAlt },
   { name: 'C#', url: 'https://learn.microsoft.com/en-us/dotnet/csharp', icon: SiDotnet },
   { name: 'Fusion 360', url: 'https://www.autodesk.com/products/fusion-360', icon: SiAutodesk }
 ];

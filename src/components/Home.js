@@ -83,7 +83,7 @@ function Home() {
           }}
         >
           <Avatar
-            src="/profile-photo.jpg" // Buraya kendi fotoğrafınızın yolunu ekleyin
+            src="/images/profil.png"
             alt="Profile Photo"
             sx={{
               width: '100%',
