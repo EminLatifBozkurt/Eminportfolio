@@ -97,6 +97,35 @@ function Navbar() {
                   </Link>
                 </MenuItem>
               ))}
+              <Box sx={{ borderTop: 1, borderColor: 'divider', mt: 1, pt: 1 }}>
+                <Stack 
+                  direction="row" 
+                  spacing={1}
+                  justifyContent="center"
+                  sx={{ p: 1 }}
+                >
+                  {socialLinks.map((social) => (
+                    <IconButton
+                      key={social.label}
+                      href={social.url}
+                      target="_blank"
+                      aria-label={social.label}
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        color: '#fff',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          transform: 'translateY(-3px)',
+                          background: 'linear-gradient(45deg, #9c27b0 30%, #2196f3 90%)',
+                          boxShadow: '0 0 15px rgba(156, 39, 176, 0.5)',
+                        },
+                      }}
+                    >
+                      {social.icon}
+                    </IconButton>
+                  ))}
+                </Stack>
+              </Box>
             </Menu>
           </Box>
 

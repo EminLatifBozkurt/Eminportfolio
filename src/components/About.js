@@ -16,7 +16,7 @@ function About() {
               Who I Am
             </Typography>
             <Typography>
-              Merhaba ben emin , Bilgisayar Mühendisiyim ve yazılım geliştirme ile ilgileniyorum, oyun 
+              Merhaba ben Emin , Bilgisayar Mühendisiyim ve yazılım geliştirme ile ilgileniyorum, oyun 
               geliştirme , siber güvenlik , yapay zeka ve kripto paralarla ilgileniyorum.
             </Typography>
           </Paper>
