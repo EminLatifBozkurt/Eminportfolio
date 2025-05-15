@@ -109,7 +109,7 @@ function Home() {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Welcome to My Portfolio
+            Emin Latif Bozkurt
           </Typography>
           <Typography
             variant="h5"
@@ -119,7 +119,7 @@ function Home() {
               opacity: 0.9,
             }}
           >
-            Computer Engineer
+            Computer Engineering Student
           </Typography>
         </Box>
       </Container>
