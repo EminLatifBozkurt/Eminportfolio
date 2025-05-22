@@ -73,7 +73,7 @@ function App() {
       <div className="App">
         <Navbar />
         <main>
-          <section id="home"><Home /></section>
+          <section id="top"><Home /></section>
           <section id="about"><About /></section>
           <section id="skills"><Skills /></section>
           <section id="portfolio"><Portfolio /></section>

@@ -12,10 +12,10 @@ import {
   Stack,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 import { GitHub, Twitter, Facebook, LinkedIn, Instagram } from '@mui/icons-material';
 
-const pages = ['Ana Sayfa', 'Hakkımda', 'Yetenekler', 'Portfolyo', 'İletişim'];
+const pages = ['Ana Sayfa', 'Ben Kimim?', 'Neler Yapabilirim?', 'Portfolyo', 'İletişim'];
 
 const socialLinks = [
   { icon: <GitHub />, url: 'https://github.com/EminLatifBozkurt', label: 'GitHub' },
@@ -34,6 +34,17 @@ function Navbar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const getSectionId = (page) => {
+    switch(page) {
+      case 'Ana Sayfa': return 'top';
+      case 'Ben Kimim?': return 'about';
+      case 'Neler Yapabilirim?': return 'skills';
+      case 'Portfolyo': return 'portfolio';
+      case 'İletişim': return 'contact';
+      default: return '';
+    }
   };
 
   return (
@@ -85,16 +96,16 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link
-                    to={page.toLowerCase()}
+                  <ScrollLink
+                    to={getSectionId(page)}
                     spy={true}
                     smooth={true}
                     offset={-64}
                     duration={500}
-                    style={{ textDecoration: 'none', color: 'inherit' }}
+                    style={{ textDecoration: 'none', color: 'inherit', width: '100%', textAlign: 'center' }}
                   >
-                    <Typography textAlign="center">{page}</Typography>
-                  </Link>
+                    {page}
+                  </ScrollLink>
                 </MenuItem>
               ))}
               <Box sx={{ borderTop: 1, borderColor: 'divider', mt: 1, pt: 1 }}>
@@ -150,8 +161,8 @@ function Navbar() {
                 key={page}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link
-                  to={page.toLowerCase()}
+                <ScrollLink
+                  to={getSectionId(page)}
                   spy={true}
                   smooth={true}
                   offset={-64}
@@ -159,7 +170,7 @@ function Navbar() {
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   {page}
-                </Link>
+                </ScrollLink>
               </Button>
             ))}
           </Box>

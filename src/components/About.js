@@ -6,7 +6,7 @@ function About() {
   return (
     <Container>
       <Typography variant="h3" component="h2" gutterBottom>
-        Hakkımda
+        Ben Kimim?
       </Typography>
       <Grid container spacing={4}>
         <Grid item xs={12} md={4}>
