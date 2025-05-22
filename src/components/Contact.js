@@ -14,16 +14,16 @@ import * as yup from 'yup';
 const validationSchema = yup.object({
   name: yup
     .string()
-    .required('Name is required')
-    .min(2, 'Name should be of minimum 2 characters length'),
+    .required('İsim zorunludur')
+    .min(2, 'İsim en az 2 karakter olmalıdır'),
   email: yup
     .string()
-    .email('Enter a valid email')
-    .required('Email is required'),
+    .email('Geçerli bir e-posta adresi giriniz')
+    .required('E-posta zorunludur'),
   message: yup
     .string()
-    .required('Message is required')
-    .min(10, 'Message should be of minimum 10 characters length'),
+    .required('Mesaj zorunludur')
+    .min(10, 'Mesaj en az 10 karakter olmalıdır'),
 });
 
 function Contact() {
@@ -58,7 +58,7 @@ function Contact() {
           textShadow: '0 0 20px rgba(156, 39, 176, 0.3)',
         }}
       >
-        Contact Me
+        İletişim
       </Typography>
       <Paper 
         elevation={3} 
@@ -84,7 +84,7 @@ function Contact() {
               border: '1px solid #66bb6a',
             }}
           >
-            Thank you for your message! I'll get back to you soon.
+            Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağım.
           </Alert>
         )}
         <form onSubmit={formik.handleSubmit}>
@@ -93,7 +93,7 @@ function Contact() {
               fullWidth
               id="name"
               name="name"
-              label="Name"
+              label="İsim"
               value={formik.values.name}
               onChange={formik.handleChange}
               error={formik.touched.name && Boolean(formik.errors.name)}
@@ -121,7 +121,7 @@ function Contact() {
               fullWidth
               id="email"
               name="email"
-              label="Email"
+              label="E-posta"
               value={formik.values.email}
               onChange={formik.handleChange}
               error={formik.touched.email && Boolean(formik.errors.email)}
@@ -149,7 +149,7 @@ function Contact() {
               fullWidth
               id="message"
               name="message"
-              label="Message"
+              label="Mesaj"
               multiline
               rows={4}
               value={formik.values.message}
@@ -194,7 +194,7 @@ function Contact() {
               },
             }}
           >
-            {formik.isSubmitting ? 'Sending...' : 'Send Message'}
+            {formik.isSubmitting ? 'Gönderiliyor...' : 'Mesaj Gönder'}
           </Button>
         </form>
       </Paper>

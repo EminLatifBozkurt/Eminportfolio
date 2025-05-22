@@ -23,7 +23,7 @@ function Footer() {
           }} 
           align="center"
         >
-          © {new Date().getFullYear()} My Portfolio. All rights reserved.
+          © {new Date().getFullYear()} Portfolyom. Tüm hakları saklıdır.
         </Typography>
       </Container>
     </Box>

@@ -15,7 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
 import { GitHub, Twitter, Facebook, LinkedIn, Instagram } from '@mui/icons-material';
 
-const pages = ['Home', 'About', 'Skills', 'Portfolio', 'Contact'];
+const pages = ['Ana Sayfa', 'Hakkımda', 'Yetenekler', 'Portfolyo', 'İletişim'];
 
 const socialLinks = [
   { icon: <GitHub />, url: 'https://github.com/EminLatifBozkurt', label: 'GitHub' },

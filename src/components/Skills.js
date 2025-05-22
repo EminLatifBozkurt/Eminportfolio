@@ -30,7 +30,7 @@ function Skills() {
           textShadow: '0 0 20px rgba(156, 39, 176, 0.3)',
         }}
       >
-        Skills
+        Yetenekler
       </Typography>
       <Grid container spacing={3}>
         {skills.map((skill) => (

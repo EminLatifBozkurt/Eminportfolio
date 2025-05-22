@@ -6,14 +6,14 @@ function About() {
   return (
     <Container>
       <Typography variant="h3" component="h2" gutterBottom>
-        About Me
+        Hakkımda
       </Typography>
       <Grid container spacing={4}>
         <Grid item xs={12} md={4}>
           <Paper elevation={3} sx={{ p: 3, height: '100%' }}>
             <Person sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
             <Typography variant="h6" gutterBottom>
-              Who I Am
+              Kimim Ben
             </Typography>
             <Typography>
               Merhaba ben Emin , Bilgisayar Mühendisiyim ve yazılım geliştirme ile ilgileniyorum, oyun 
@@ -25,7 +25,7 @@ function About() {
           <Paper elevation={3} sx={{ p: 3, height: '100%' }}>
             <School sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
             <Typography variant="h6" gutterBottom>
-              Education
+              Eğitim
             </Typography>
             <Typography>
               Balıkesir Üniversitesi Bilgisayar Mühendisliği 2.sınıf öğrencisiyim.
@@ -36,7 +36,7 @@ function About() {
           <Paper elevation={3} sx={{ p: 3, height: '100%' }}>
             <Work sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
             <Typography variant="h6" gutterBottom>
-              Experience
+              Deneyim
             </Typography>
             <Typography>
               Balıkesir Üniversitesi EBST  (Elektrik ve Bilgisayar Sistemleri Topluluğu) yönetim kurulunda görev almaktayım,

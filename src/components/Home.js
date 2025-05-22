@@ -119,7 +119,7 @@ function Home() {
               opacity: 0.9,
             }}
           >
-            Computer Engineering Student
+            Bilgisayar Mühendisliği Öğrencisi
           </Typography>
         </Box>
       </Container>
