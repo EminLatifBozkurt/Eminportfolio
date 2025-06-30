@@ -4,11 +4,36 @@
   display: flex;
   flex-direction: column;
   background-color: #121212;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C27B0' fill-opacity='0.1'%3E%3Cpath d='M50 0L0 25v50l50 25 50-25V25L50 0zm0 5l45 22.5v45L50 95 5 72.5v-45L50 5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: relative;
+  overflow: hidden;
+}
+
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #9c27b0, #2196f3);
+  opacity: 0.05;
+  animation: flowDown 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes flowDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 main {
   flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
 section {
@@ -20,28 +45,48 @@ section {
   position: relative;
 }
 
-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(33, 150, 243, 0.1) 100%);
-  pointer-events: none;
+/* Remove all gradient and pattern backgrounds */
+section::before,
+section::after {
+  display: none;
 }
 
-/* Hexagonal grid pattern */
-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%232196F3' fill-opacity='0.1'%3E%3Cpath d='M50 0L0 25v50l50 25 50-25V25L50 0zm0 5l45 22.5v45L50 95 5 72.5v-45L50 5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.05;
-  pointer-events: none;
+.card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Yazı animasyonu için yeni stiller */
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #9c27b0;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  margin: 0;
+  color: #9c27b0;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #9c27b0 }
 }
 
 @media (max-width: 600px) {

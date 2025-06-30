@@ -49,7 +49,7 @@ function Portfolio() {
           textShadow: '0 0 20px rgba(156, 39, 176, 0.3)',
         }}
       >
-        Portfolyo
+        Portfolio
       </Typography>
       <Grid container spacing={4}>
         {projects.map((project, index) => (
@@ -108,7 +108,7 @@ function Portfolio() {
                     textShadow: '0 0 5px rgba(33, 150, 243, 0.3)',
                   }}
                 >
-                  Teknolojiler: {project.technologies.join(', ')}
+                  Technologies: {project.technologies.join(', ')}
                 </Typography>
               </CardContent>
               <CardActions sx={{ justifyContent: 'center', pb: 2 }}>

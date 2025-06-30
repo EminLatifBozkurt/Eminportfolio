@@ -23,7 +23,7 @@ const theme = createTheme({
     },
     background: {
       default: '#121212',
-      paper: '#1E1E1E',
+      paper: '#1e1e1e',
     },
     text: {
       primary: '#ffffff',
@@ -35,9 +35,9 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundImage: 'none',
-          backgroundColor: 'rgba(30, 30, 30, 0.9)',
+          backgroundColor: '#1e1e1e',
           '&:hover': {
-            backgroundColor: 'rgba(35, 35, 35, 0.95)',
+            backgroundColor: '#2d2d2d',
           },
         },
       },
@@ -45,8 +45,9 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: 'rgba(18, 18, 18, 0.8)',
-          backdropFilter: 'blur(8px)',
+          backgroundColor: '#1e1e1e',
+          color: '#ffffff',
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
         },
       },
     },
@@ -73,7 +74,7 @@ function App() {
       <div className="App">
         <Navbar />
         <main>
-          <section id="top"><Home /></section>
+          <section id="home"><Home /></section>
           <section id="about"><About /></section>
           <section id="skills"><Skills /></section>
           <section id="portfolio"><Portfolio /></section>
