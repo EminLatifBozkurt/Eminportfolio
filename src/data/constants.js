@@ -5,7 +5,7 @@ import { SiAutodesk, SiDotnet } from 'react-icons/si';
 export const personalInfo = {
     name: "Emin Latif Bozkurt",
     title: "Bilgisayar Mühendisliği Öğrencisi",
-    bio: "Merhaba, ben Emin Latif Bozkurt. Fırat Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Teknolojiye ve yazılıma olan tutkumla, kendimi sürekli geliştirmeyi ve yeni şeyler öğrenmeyi hedefliyorum. Henüz iş deneyimim bulunmasa da, geliştirdiğim projelerle teorik bilgilerimi pratiğe döküyorum. Yazılım dünyasındaki gelişmeleri yakından takip ediyor ve her geçen gün yeteneklerime bir yenisini eklemek için çalışıyorum. Boş zamanlarımda da kod yazarak ve araştırma yaparak kendimi dinç tutuyorum.",
+    bio: "Merhaba, ben Emin Latif Bozkurt. Balıkesir Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Teknolojiye ve yazılıma olan tutkumla, kendimi sürekli geliştirmeyi ve yeni şeyler öğrenmeyi hedefliyorum. Henüz iş deneyimim bulunmasa da, geliştirdiğim projelerle teorik bilgilerimi pratiğe döküyorum. Yazılım dünyasındaki gelişmeleri yakından takip ediyor ve her geçen gün yeteneklerime bir yenisini eklemek için çalışıyorum. Boş zamanlarımda da kod yazarak ve araştırma yaparak kendimi dinç tutuyorum.",
     email: "eminlatifbozkurt@gmail.com", // Assuming standard email pattern or will be replaced by form
 };
 
