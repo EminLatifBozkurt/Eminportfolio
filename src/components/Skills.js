@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper, Box, Link } from '@mui/material';
 import { FaReact, FaJs, FaHtml5, FaNodeJs, FaPython, FaDatabase } from 'react-icons/fa';
-import { SiCsharp, SiAutodesk, SiDotnet } from 'react-icons/si';
+import { SiAutodesk, SiDotnet } from 'react-icons/si';
 
 const skills = [
   { name: 'React', url: 'https://reactjs.org', icon: FaReact },
@@ -17,9 +17,9 @@ const skills = [
 function Skills() {
   return (
     <Container>
-      <Typography 
-        variant="h3" 
-        component="h2" 
+      <Typography
+        variant="h3"
+        component="h2"
         gutterBottom
         sx={{
           textAlign: 'center',
@@ -35,7 +35,7 @@ function Skills() {
       <Grid container spacing={3}>
         {skills.map((skill) => (
           <Grid item xs={12} sm={6} md={4} key={skill.name}>
-            <Link 
+            <Link
               href={skill.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -67,7 +67,7 @@ function Skills() {
                       color: '#9c27b0'
                     }
                   })}
-                  <Typography 
+                  <Typography
                     variant="h6"
                     sx={{
                       background: 'linear-gradient(45deg, #9c27b0, #2196f3)',
