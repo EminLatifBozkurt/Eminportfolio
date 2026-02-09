@@ -6,24 +6,23 @@ function Footer() {
     <Box
       component="footer"
       sx={{
-        py: 3,
+        py: 4,
         px: 2,
         mt: 'auto',
-        background: 'rgba(18, 18, 18, 0.95)',
+        background: 'rgba(0, 0, 0, 0.2)',
         backdropFilter: 'blur(10px)',
-        borderTop: '1px solid rgba(156, 39, 176, 0.1)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
       }}
     >
       <Container maxWidth="sm">
-        <Typography 
-          variant="body2" 
-          sx={{ 
-            color: 'rgba(255,255,255,0.7)',
-            textShadow: '0 0 5px rgba(33, 150, 243, 0.3)',
-          }} 
-          align="center"
+        <Typography
+          variant="body2"
+          sx={{
+            color: 'var(--text-secondary)',
+            textAlign: 'center'
+          }}
         >
-          © {new Date().getFullYear()} Portfolyom. Tüm hakları saklıdır.
+          © {new Date().getFullYear()} Emin Latif Bozkurt. Tüm hakları saklıdır.
         </Typography>
       </Container>
     </Box>

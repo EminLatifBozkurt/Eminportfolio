@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import { motion } from 'framer-motion';
 
 const validationSchema = yup.object({
   name: yup
@@ -46,159 +47,155 @@ function Contact() {
   });
 
   return (
-    <Container maxWidth="md">
-      <Typography 
-        variant="h3" 
-        component="h2" 
-        gutterBottom
-        sx={{
-          background: 'linear-gradient(45deg, #9c27b0, #2196f3)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          textShadow: '0 0 20px rgba(156, 39, 176, 0.3)',
-        }}
-      >
-        İletişim
-      </Typography>
-      <Paper 
-        elevation={3} 
-        sx={{ 
-          p: 4,
-          background: 'rgba(30, 30, 30, 0.9)',
-          backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(156, 39, 176, 0.1)',
-          transition: 'all 0.3s ease',
-          '&:hover': {
-            boxShadow: '0 0 20px rgba(156, 39, 176, 0.2)',
-            border: '1px solid rgba(156, 39, 176, 0.2)',
-          },
-        }}
-      >
-        {formik.status?.success && (
-          <Alert 
-            severity="success" 
-            sx={{ 
-              mb: 2,
-              backgroundColor: 'rgba(46, 125, 50, 0.1)',
-              color: '#66bb6a',
-              border: '1px solid #66bb6a',
-            }}
-          >
-            Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağım.
-          </Alert>
-        )}
-        <form onSubmit={formik.handleSubmit}>
-          <Box sx={{ mb: 2 }}>
-            <TextField
-              fullWidth
-              id="name"
-              name="name"
-              label="İsim"
-              value={formik.values.name}
-              onChange={formik.handleChange}
-              error={formik.touched.name && Boolean(formik.errors.name)}
-              helperText={formik.touched.name && formik.errors.name}
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: 'rgba(156, 39, 176, 0.2)',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: 'rgba(156, 39, 176, 0.4)',
-                  },
-                  '&.Mui-focused fieldset': {
-                    borderColor: '#9c27b0',
-                  },
-                },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: '#9c27b0',
-                },
-              }}
-            />
-          </Box>
-          <Box sx={{ mb: 2 }}>
-            <TextField
-              fullWidth
-              id="email"
-              name="email"
-              label="E-posta"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              error={formik.touched.email && Boolean(formik.errors.email)}
-              helperText={formik.touched.email && formik.errors.email}
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: 'rgba(156, 39, 176, 0.2)',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: 'rgba(156, 39, 176, 0.4)',
-                  },
-                  '&.Mui-focused fieldset': {
-                    borderColor: '#9c27b0',
-                  },
-                },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: '#9c27b0',
-                },
-              }}
-            />
-          </Box>
-          <Box sx={{ mb: 3 }}>
-            <TextField
-              fullWidth
-              id="message"
-              name="message"
-              label="Mesaj"
-              multiline
-              rows={4}
-              value={formik.values.message}
-              onChange={formik.handleChange}
-              error={formik.touched.message && Boolean(formik.errors.message)}
-              helperText={formik.touched.message && formik.errors.message}
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: 'rgba(156, 39, 176, 0.2)',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: 'rgba(156, 39, 176, 0.4)',
-                  },
-                  '&.Mui-focused fieldset': {
-                    borderColor: '#9c27b0',
-                  },
-                },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: '#9c27b0',
-                },
-              }}
-            />
-          </Box>
-          <Button
-            color="primary"
-            variant="contained"
-            fullWidth
-            type="submit"
-            disabled={formik.isSubmitting}
+    <Box sx={{ py: 10, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+      <Container maxWidth="md">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
             sx={{
-              py: 1.5,
-              background: 'linear-gradient(45deg, #9c27b0 30%, #2196f3 90%)',
-              boxShadow: '0 0 10px rgba(156, 39, 176, 0.3)',
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                background: 'linear-gradient(45deg, #7b1fa2 30%, #1976d2 90%)',
-                boxShadow: '0 0 15px rgba(156, 39, 176, 0.5)',
-              },
-              '&:disabled': {
-                background: 'rgba(156, 39, 176, 0.3)',
-              },
+              textAlign: 'center',
+              mb: 6,
+              fontWeight: 700,
             }}
           >
-            {formik.isSubmitting ? 'Gönderiliyor...' : 'Mesaj Gönder'}
-          </Button>
-        </form>
-      </Paper>
-    </Container>
+            <span className="gradient-text">İletişim</span>
+          </Typography>
+
+          <Paper
+            elevation={0}
+            className="glass-card"
+            sx={{
+              p: { xs: 4, md: 6 },
+              borderRadius: 4,
+            }}
+          >
+            {formik.status?.success && (
+              <Alert
+                severity="success"
+                sx={{
+                  mb: 4,
+                  backgroundColor: 'rgba(46, 125, 50, 0.1)',
+                  color: '#81c784',
+                  border: '1px solid rgba(46, 125, 50, 0.3)',
+                }}
+              >
+                Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağım.
+              </Alert>
+            )}
+            <form onSubmit={formik.handleSubmit}>
+              <Box sx={{ mb: 4 }}>
+                <TextField
+                  fullWidth
+                  id="name"
+                  name="name"
+                  label="İsim"
+                  variant="outlined"
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  error={formik.touched.name && Boolean(formik.errors.name)}
+                  helperText={formik.touched.name && formik.errors.name}
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                      '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.1)' },
+                      '&:hover fieldset': { borderColor: 'rgba(156, 39, 176, 0.5)' },
+                      '&.Mui-focused fieldset': { borderColor: '#9c27b0' },
+                      color: 'white',
+                    },
+                    '& .MuiInputLabel-root': { color: 'rgba(255, 255, 255, 0.7)' },
+                    '& .MuiInputLabel-root.Mui-focused': { color: '#9c27b0' },
+                    '& .MuiFormHelperText-root': { color: '#f44336' },
+                  }}
+                />
+              </Box>
+              <Box sx={{ mb: 4 }}>
+                <TextField
+                  fullWidth
+                  id="email"
+                  name="email"
+                  label="E-posta"
+                  variant="outlined"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  error={formik.touched.email && Boolean(formik.errors.email)}
+                  helperText={formik.touched.email && formik.errors.email}
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                      '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.1)' },
+                      '&:hover fieldset': { borderColor: 'rgba(156, 39, 176, 0.5)' },
+                      '&.Mui-focused fieldset': { borderColor: '#9c27b0' },
+                      color: 'white',
+                    },
+                    '& .MuiInputLabel-root': { color: 'rgba(255, 255, 255, 0.7)' },
+                    '& .MuiInputLabel-root.Mui-focused': { color: '#9c27b0' },
+                  }}
+                />
+              </Box>
+              <Box sx={{ mb: 4 }}>
+                <TextField
+                  fullWidth
+                  id="message"
+                  name="message"
+                  label="Mesaj"
+                  multiline
+                  rows={4}
+                  variant="outlined"
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
+                  error={formik.touched.message && Boolean(formik.errors.message)}
+                  helperText={formik.touched.message && formik.errors.message}
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                      '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.1)' },
+                      '&:hover fieldset': { borderColor: 'rgba(156, 39, 176, 0.5)' },
+                      '&.Mui-focused fieldset': { borderColor: '#9c27b0' },
+                      color: 'white',
+                    },
+                    '& .MuiInputLabel-root': { color: 'rgba(255, 255, 255, 0.7)' },
+                    '& .MuiInputLabel-root.Mui-focused': { color: '#9c27b0' },
+                  }}
+                />
+              </Box>
+              <Button
+                color="primary"
+                variant="contained"
+                fullWidth
+                type="submit"
+                disabled={formik.isSubmitting}
+                sx={{
+                  py: 1.5,
+                  fontSize: '1.1rem',
+                  textTransform: 'none',
+                  background: 'linear-gradient(45deg, #9c27b0 30%, #2196f3 90%)',
+                  boxShadow: '0 0 20px rgba(156, 39, 176, 0.3)',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    background: 'linear-gradient(45deg, #7b1fa2 30%, #1976d2 90%)',
+                    boxShadow: '0 0 30px rgba(156, 39, 176, 0.5)',
+                    transform: 'translateY(-2px)',
+                  },
+                  '&:disabled': {
+                    background: 'rgba(156, 39, 176, 0.3)',
+                    color: 'rgba(255,255,255,0.3)'
+                  },
+                }}
+              >
+                {formik.isSubmitting ? 'Gönderiliyor...' : 'Mesaj Gönder'}
+              </Button>
+            </form>
+          </Paper>
+        </motion.div>
+      </Container>
+    </Box>
   );
 }
 

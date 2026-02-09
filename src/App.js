@@ -16,38 +16,32 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#9c27b0', // Purple color
+      main: '#9c27b0',
     },
     secondary: {
-      main: '#2196f3', // Blue color
+      main: '#2196f3',
     },
     background: {
-      default: '#121212',
-      paper: '#1e1e1e',
+      default: '#0a0a0a',
+      paper: 'rgba(255, 255, 255, 0.05)',
     },
     text: {
       primary: '#ffffff',
       secondary: 'rgba(255, 255, 255, 0.7)',
     },
   },
+  typography: {
+    fontFamily: "'Inter', sans-serif",
+    h1: { fontWeight: 800 },
+    h2: { fontWeight: 700 },
+    h3: { fontWeight: 700 },
+  },
   components: {
-    MuiPaper: {
+    MuiCssBaseline: {
       styleOverrides: {
-        root: {
-          backgroundImage: 'none',
-          backgroundColor: '#1e1e1e',
-          '&:hover': {
-            backgroundColor: '#2d2d2d',
-          },
-        },
-      },
-    },
-    MuiAppBar: {
-      styleOverrides: {
-        root: {
-          backgroundColor: '#1e1e1e',
-          color: '#ffffff',
-          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+        body: {
+          backgroundColor: '#0a0a0a',
+          backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156, 39, 176, 0.05) 0%, rgba(10, 10, 10, 1) 70%)',
         },
       },
     },
@@ -55,12 +49,14 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 8,
+          textTransform: 'none',
         },
-        contained: {
-          background: 'linear-gradient(45deg, #9c27b0 30%, #2196f3 90%)',
-          '&:hover': {
-            background: 'linear-gradient(45deg, #7b1fa2 30%, #1976d2 90%)',
-          },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundImage: 'none',
         },
       },
     },

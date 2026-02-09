@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as ScrollLink } from 'react-scroll';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { socialLinks } from '../data/constants';
 
 const pages = ['Ana Sayfa', 'Ben Kimim?', 'Neler Yapabilirim?', 'Portfolyo', 'İletişim'];
