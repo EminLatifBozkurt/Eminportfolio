@@ -48,9 +48,8 @@ function About() {
               textAlign: 'justify',
             }}
           >
-            Merhaba! Ben Emin, 20 yaşında bir bilgisayar mühendisliği öğrencisiyim. Teknoloji ve yazılım
-            dünyasına olan tutkum, beni sürekli yeni şeyler öğrenmeye yönlendiriyor. Yazılım geliştirme,
-            oyun geliştirme, siber güvenlik, yapay zeka ve kripto paralar alanlarında kendimi geliştiriyorum.
+            Merhaba, ben Emin Latif Bozkurt. Fırat Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim.
+            Teknolojiye ve yazılıma olan tutkumla, kendimi sürekli geliştirmeyi ve yeni şeyler öğrenmeyi hedefliyorum.
           </Typography>
           <Typography
             variant="body1"
@@ -62,10 +61,9 @@ function About() {
               mt: 2,
             }}
           >
-            Balıkesir Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. EBST (Elektrik ve Bilgisayar
-            Sistemleri Topluluğu) yönetim kurulunda görev alıyorum. Boş zamanlarımda yeni teknolojileri
-            keşfetmeyi ve projeler geliştirmeyi seviyorum. Sürekli kendimi geliştirmeye odaklanıyorum ve
-            yeni fırsatlar arıyorum.
+            Henüz iş deneyimim bulunmasa da, geliştirdiğim projelerle teorik bilgilerimi pratiğe döküyorum.
+            Yazılım dünyasındaki gelişmeleri yakından takip ediyor ve her geçen gün yeteneklerime bir yenisini eklemek için çalışıyorum.
+            Boş zamanlarımda da kod yazarak ve araştırma yaparak kendimi dinç tutuyorum.
           </Typography>
         </Paper>
       </Container>
