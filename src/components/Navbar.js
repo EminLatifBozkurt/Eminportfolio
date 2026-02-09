@@ -10,7 +10,6 @@ import {
   Button,
   MenuItem,
   Stack,
-  useScrollTrigger,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as ScrollLink } from 'react-scroll';
