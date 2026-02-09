@@ -48,8 +48,8 @@ function About() {
               textAlign: 'justify',
             }}
           >
-            Merhaba! Ben Emin, 20 yaşında bir bilgisayar mühendisliği öğrencisiyim. Teknoloji ve yazılım 
-            dünyasına olan tutkum, beni sürekli yeni şeyler öğrenmeye yönlendiriyor. Yazılım geliştirme, 
+            Merhaba! Ben Emin, 20 yaşında bir bilgisayar mühendisliği öğrencisiyim. Teknoloji ve yazılım
+            dünyasına olan tutkum, beni sürekli yeni şeyler öğrenmeye yönlendiriyor. Yazılım geliştirme,
             oyun geliştirme, siber güvenlik, yapay zeka ve kripto paralar alanlarında kendimi geliştiriyorum.
           </Typography>
           <Typography
@@ -62,9 +62,9 @@ function About() {
               mt: 2,
             }}
           >
-            Balıkesir Üniversitesi Bilgisayar Mühendisliği 3.sınıf öğrencisiyim. EBST (Elektrik ve Bilgisayar 
-            Sistemleri Topluluğu) yönetim kurulunda görev alıyorum. Boş zamanlarımda yeni teknolojileri 
-            keşfetmeyi ve projeler geliştirmeyi seviyorum. Sürekli kendimi geliştirmeye odaklanıyorum ve 
+            Balıkesir Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. EBST (Elektrik ve Bilgisayar
+            Sistemleri Topluluğu) yönetim kurulunda görev alıyorum. Boş zamanlarımda yeni teknolojileri
+            keşfetmeyi ve projeler geliştirmeyi seviyorum. Sürekli kendimi geliştirmeye odaklanıyorum ve
             yeni fırsatlar arıyorum.
           </Typography>
         </Paper>
