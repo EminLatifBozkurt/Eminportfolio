@@ -1,91 +1,121 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper, Box, Link } from '@mui/material';
-import { FaReact, FaJs, FaHtml5, FaNodeJs, FaPython, FaDatabase } from 'react-icons/fa';
-import { SiAutodesk, SiDotnet } from 'react-icons/si';
-
-const skills = [
-  { name: 'React', url: 'https://reactjs.org', icon: FaReact },
-  { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', icon: FaJs },
-  { name: 'HTML/CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML', icon: FaHtml5 },
-  { name: 'Node.js', url: 'https://nodejs.org', icon: FaNodeJs },
-  { name: 'Python', url: 'https://www.python.org', icon: FaPython },
-  { name: 'SQL', url: 'https://www.w3schools.com/sql', icon: FaDatabase },
-  { name: 'C#', url: 'https://learn.microsoft.com/en-us/dotnet/csharp', icon: SiDotnet },
-  { name: 'Fusion 360', url: 'https://www.autodesk.com/products/fusion-360', icon: SiAutodesk }
-];
+import { motion } from 'framer-motion';
+import { skills } from '../data/constants';
 
 function Skills() {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
   return (
-    <Container>
-      <Typography
-        variant="h3"
-        component="h2"
-        gutterBottom
-        sx={{
-          textAlign: 'center',
-          mb: 4,
-          background: 'linear-gradient(45deg, #9c27b0, #2196f3)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          textShadow: '0 0 20px rgba(156, 39, 176, 0.3)',
-        }}
-      >
-        Neler Yapabilirim?
-      </Typography>
-      <Grid container spacing={3}>
-        {skills.map((skill) => (
-          <Grid item xs={12} sm={6} md={4} key={skill.name}>
-            <Link
-              href={skill.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ textDecoration: 'none' }}
-            >
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 3,
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  '&:hover': {
-                    transform: 'translateY(-5px)',
-                    boxShadow: '0 0 20px rgba(156, 39, 176, 0.3)',
-                    background: 'linear-gradient(45deg, rgba(156, 39, 176, 0.2), rgba(33, 150, 243, 0.2))',
-                  },
-                  background: 'rgba(30, 30, 30, 0.9)',
-                  backdropFilter: 'blur(10px)',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  minHeight: '100px',
-                }}
+    <Box sx={{ py: 10, minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <Typography
+            variant="h3"
+            component="h2"
+            gutterBottom
+            sx={{
+              textAlign: 'center',
+              mb: 6,
+              fontWeight: 700,
+            }}
+          >
+            <span className="gradient-text">Neler Yapabilirim?</span>
+          </Typography>
+        </motion.div>
+
+        <Grid
+          container
+          spacing={3}
+          component={motion.div}
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {skills.map((skill) => (
+            <Grid item xs={12} sm={6} md={3} key={skill.name} component={motion.div} variants={item}>
+              <Link
+                href={skill.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ textDecoration: 'none' }}
               >
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                  {React.createElement(skill.icon, {
-                    size: 24,
-                    style: {
-                      color: '#9c27b0'
-                    }
-                  })}
+                <Paper
+                  elevation={0}
+                  className="glass-card"
+                  sx={{
+                    p: 3,
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    '&:hover': {
+                      transform: 'translateY(-10px)',
+                      background: 'rgba(156, 39, 176, 0.15)',
+                      boxShadow: '0 0 30px rgba(156, 39, 176, 0.3)',
+                      border: '1px solid rgba(156, 39, 176, 0.5)',
+                    },
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    minHeight: '160px',
+                    borderRadius: 4,
+                  }}
+                >
+                  <Box sx={{
+                    mb: 2,
+                    p: 2,
+                    borderRadius: '50%',
+                    background: 'rgba(255,255,255,0.05)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    {React.createElement(skill.icon, {
+                      size: 40,
+                      style: { color: '#ffffff' }
+                    })}
+                  </Box>
                   <Typography
                     variant="h6"
                     sx={{
-                      background: 'linear-gradient(45deg, #9c27b0, #2196f3)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
+                      color: 'white',
                       fontWeight: 600,
                       textAlign: 'center',
                     }}
                   >
                     {skill.name}
                   </Typography>
-                </Box>
-              </Paper>
-            </Link>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+                </Paper>
+              </Link>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   );
 }
 
